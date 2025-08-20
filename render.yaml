@@ -1,6 +1,9 @@
 services:
   - type: worker
     name: santan-bot
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: python santan_bot.py
+    runtime: python
+    buildCommand: ""
+    startCommand: python3 santan_bot.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10
